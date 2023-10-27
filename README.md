@@ -1,1 +1,1 @@
-This is my repository for Hexlet JS course
+This is my repository for Hexlet JS course.
