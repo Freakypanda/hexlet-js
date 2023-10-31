@@ -29,7 +29,7 @@ const getWeekends = (format) => {
   // Если массив содержит меньше двух элементов, то он возвращается как есть.
 
   const swap = (array) => {
-    if (array.length <2) {
+    if (array.length < 2) {
         return array;
     } else {
         const cash = array[0];
