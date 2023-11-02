@@ -69,3 +69,18 @@ const addPrefix = (array, prefix) => {
   return prefixArray;
 };
 
+// Task #6
+
+// Реализуйте и экспортируйте функцию reverse(), которая принимает на вход массив и располагает элементы исходного массива в обратном порядке.
+// Функция должна мутировать переданный в нее массив. Новый массив из нее возвращать не надо.
+
+const reverse = (array) => {
+  for (let i = 0, j = array.length - 1; i < j; i += 1, j -= 1) {
+    let temp = array[i];
+    array[i] = array [j];
+    array[j] = temp;
+  }
+  return array;
+};
+
+
