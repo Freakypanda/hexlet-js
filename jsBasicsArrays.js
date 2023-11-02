@@ -102,3 +102,22 @@ const calculateSum = (array) => {
   }
   return sum;
 };
+
+
+// Task #8
+
+// Реализуйте и экспортируйте по умолчанию функцию, которая высчитывает среднее арифметическое элементов переданного массива.
+// В случае пустого массива функция должна вернуть значение null (используйте в коде для этого guard expression).
+
+const sumAverage = (array) => {
+  if (array.length === 0) {
+    return null;
+  }
+  let sum = 0;
+  for (const number of array) {
+    sum += number;
+  }
+  return sum / array.length;
+};
+
+
