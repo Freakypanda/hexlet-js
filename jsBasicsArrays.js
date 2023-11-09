@@ -215,6 +215,28 @@ const buildDefinitionList = (definitions) => {
 };
 
 
+// Task #13
+
+// Реализуйте и экспортируйте по умолчанию функцию, которая заменяет каждое вхождение указанных слов в предложении на последовательность $#%! и возвращает полученную строку. 
+//    Аргументы:
+//    - текст
+//    - набор стоп слов
+// Словом считается любая непрерывная последовательность символов, включая любые спецсимволы (без пробелов).
+
+const makeCensored = (text, stopWordsList) => {
+  const mask = '$#%!';
+  let censoredText = [];
+  for (const word of text.split(' ')) {
+      if (stopWordsList.includes(word)) {
+          censoredText.push(mask);
+      } else {
+          censoredText.push(word);
+      }
+  };
+  return censoredText.join(' ');
+};
+
+
 
 
 
