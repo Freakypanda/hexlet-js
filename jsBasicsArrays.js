@@ -147,6 +147,32 @@ const getSameParity = (array) => {
 };
 
 
+// Task #10
+
+// Реализуйте и экспортируйте по умолчанию функцию, которая принимает на вход в виде массива кошелек с деньгами и 
+// название валюты и возвращает сумму денег указанной валюты. Параметры функции:
+// - массив, содержащий купюры разных валют с различными номиналами;
+// - наименование валюты.
+
+const getTotalAmount = (wallet, currency) => {
+  let sum = 0;
+  if (wallet.length === 0) {
+    return sum;
+  }
+  for (const bill of wallet) {
+    if (bill.slice(0, 3) !== currency) {
+      continue;
+    } else {
+      sum += Number(bill.slice(3));
+    }
+  }
+  return sum;
+};
+
+
+
+
+
 
 
 
