@@ -194,6 +194,30 @@ const getSuperSeriesWinner = (scores) => {
 };
 
 
+// Task #12
+
+// Реализуйте функцию buildDefinitionList(), которая генерирует HTML список определений (теги <dl>, <dt> и <dd>) и возвращает 
+// получившуюся строку. При отсутствии элементов в массиве функция возвращает пустую строку. Параметр функции - cписок определений формата:
+// const definitions = [
+//   ['definition1', 'description1'],
+//   ['definition2', 'description2']
+// ]
+
+const buildDefinitionList = (definitions) => {
+  const resultArray = [];
+  if (definitions.length === 0) {
+    return '';
+  }
+  for (const definition of definitions) {
+    resultArray.push(`<dt>${definition[0]}</dt><dd>${definition[1]}</dd>`);
+  }
+  return `<dl>${resultArray.join('')}</dl>`;
+};
+
+
+
+
+
 
 
 
