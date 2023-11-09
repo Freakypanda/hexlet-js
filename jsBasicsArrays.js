@@ -120,4 +120,34 @@ const sumAverage = (array) => {
   return sum / array.length;
 };
 
+// Task #9
+
+// Реализуйте функцию getSameParity(), которая принимает на вход массив чисел и возвращает новый, состоящий из элементов, 
+// у которых такая же чётность, как и у первого элемента входного массива. Экспортируйте функцию по умолчанию.
+
+const getSameParity = (array) => {
+  const resultArray = [];
+  if (array.length === 0) {
+    return resultArray;
+  }
+  if (Math.abs(array[0]) % 2 === 0) {
+    for (const num of array) {
+      if (Math.abs(num) % 2 === 0) {
+        resultArray.push(num);
+      }
+    }
+  } else {
+    for (const num of array) {
+      if (Math.abs(num) % 2 !== 0) {
+        resultArray.push(num);
+      }
+    }
+  }
+  return resultArray;
+};
+
+
+
+
+
 
