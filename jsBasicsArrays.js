@@ -238,6 +238,24 @@ const makeCensored = (text, stopWordsList) => {
 };
 
 
+// Task #20
+
+// Реализуйте и экспортируйте функцию getMax(), которая ищет в массиве максимальное значение и возвращает его.
+// Используйте оператор rest вместе с деструктуризацией для извлечения первого элемента и всех остальных. 
+// Первый элемент становится начальным значением максимального, а остальные перебираются в цикле для определения максимального.
+
+const getMax = (numbers) => {
+  if (numbers.length === 0) {
+    return null;
+  }
+  let [maxNumber, ...rest] = numbers;
+  for (const number of rest) {
+    if (number > maxNumber) {
+      maxNumber = number;
+    }
+  }
+  return maxNumber;
+};
 
 
 
