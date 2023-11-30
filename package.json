@@ -1,9 +1,9 @@
 {
-  "name": "hexlet-js",
+  "name": "hexlet-arrays",
   "version": "1.0.0",
   "type": "module",
   "description": "This is my repository for Hexlet JS course.",
-  "main": "index.js",
+  "main": "jsBasicsArrays.js",
   "scripts": {
     "test": "test"
   },

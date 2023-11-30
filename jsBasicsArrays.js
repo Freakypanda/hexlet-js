@@ -5,7 +5,7 @@
 // - 'long' – вернётся массив, содержащий значения saturday и sunday
 // - 'short' – вернётся массив со значениями sat и sun
 
-const getWeekends = (format) => {
+export const getWeekends = (format) => {
   const weekends = ["saturday", "sunday"];
   switch (format) {
     case "long":
@@ -25,7 +25,7 @@ const getWeekends = (format) => {
 // Реализуйте и экспортируйте функцию swap(), которая меняет местами первый и последний элемент массива.
 // Если массив содержит меньше двух элементов, то он возвращается как есть.
 
-const swap = (array) => {
+export const swap = (array) => {
   if (array.length < 2) {
     return array;
   } else {
@@ -45,7 +45,7 @@ const swap = (array) => {
 //  - индекс
 //  - значение по умолчанию (равно null)
 
-const get = (array, index, param = null) => {
+export const get = (array, index, param = null) => {
   if (index >= array.length) {
     return param;
   }
@@ -58,7 +58,7 @@ const get = (array, index, param = null) => {
 // Эта функция должна возвращать новый массив, в котором к каждому элементу исходного массива добавляется переданный префикс.
 // Функция предназначена для работы со строковыми элементами. После префикса должен добавляться пробел.
 
-const addPrefix = (array, prefix) => {
+export const addPrefix = (array, prefix) => {
   let prefixArray = [];
   for (let string of array) {
     prefixArray.push(`${prefix} ${string}`);
@@ -71,7 +71,7 @@ const addPrefix = (array, prefix) => {
 // Реализуйте и экспортируйте функцию reverse(), которая принимает на вход массив и располагает элементы исходного массива в обратном порядке.
 // Функция должна мутировать переданный в нее массив. Новый массив из нее возвращать не надо.
 
-const reverse = (array) => {
+export const reverse = (array) => {
   for (let i = 0, j = array.length - 1; i < j; i += 1, j -= 1) {
     let temp = array[i];
     array[i] = array[j];
@@ -85,7 +85,7 @@ const reverse = (array) => {
 // Реализуйте и экспортируйте по умолчанию функцию. Она должна высчитывать сумму всех элементов массива, которые делятся без остатка на три:
 // В случае пустого массива функция должна вернуть 0 (для этого в коде можно использовать guard expression).
 
-const calculateSum = (array) => {
+export const calculateSum = (array) => {
   if (array.length === 0) {
     return 0;
   }
@@ -103,7 +103,7 @@ const calculateSum = (array) => {
 // Реализуйте и экспортируйте по умолчанию функцию, которая высчитывает среднее арифметическое элементов переданного массива.
 // В случае пустого массива функция должна вернуть значение null (используйте в коде для этого guard expression).
 
-const sumAverage = (array) => {
+export const sumAverage = (array) => {
   if (array.length === 0) {
     return null;
   }
@@ -119,7 +119,7 @@ const sumAverage = (array) => {
 // Реализуйте функцию getSameParity(), которая принимает на вход массив чисел и возвращает новый, состоящий из элементов,
 // у которых такая же чётность, как и у первого элемента входного массива. Экспортируйте функцию по умолчанию.
 
-const getSameParity = (array) => {
+export const getSameParity = (array) => {
   const resultArray = [];
   if (array.length === 0) {
     return resultArray;
@@ -147,7 +147,7 @@ const getSameParity = (array) => {
 // - массив, содержащий купюры разных валют с различными номиналами;
 // - наименование валюты.
 
-const getTotalAmount = (wallet, currency) => {
+export const getTotalAmount = (wallet, currency) => {
   let sum = 0;
   if (wallet.length === 0) {
     return sum;
@@ -170,7 +170,7 @@ const getTotalAmount = (wallet, currency) => {
 // (сколько шайб забила Канада и СССР). Результат функции – название страны: 'canada', 'ussr'. Если суперсерия
 // закончилась вничью, то нужно вернуть null.
 
-const getSuperSeriesWinner = (scores) => {
+export const getSuperSeriesWinner = (scores) => {
   let ratio = 0;
   for (const score of scores) {
     ratio += Math.sign(score[0] - score[1]);
@@ -194,7 +194,7 @@ const getSuperSeriesWinner = (scores) => {
 //   ['definition2', 'description2']
 // ]
 
-const buildDefinitionList = (definitions) => {
+export const buildDefinitionList = (definitions) => {
   const resultArray = [];
   if (definitions.length === 0) {
     return "";
@@ -214,7 +214,7 @@ const buildDefinitionList = (definitions) => {
 //    - набор стоп слов
 // Словом считается любая непрерывная последовательность символов, включая любые спецсимволы (без пробелов).
 
-const makeCensored = (text, stopWordsList) => {
+export const makeCensored = (text, stopWordsList) => {
   const mask = "$#%!";
   const censoredText = [];
   for (const word of text.split(" ")) {
@@ -233,7 +233,7 @@ const makeCensored = (text, stopWordsList) => {
 // Используйте оператор rest вместе с деструктуризацией для извлечения первого элемента и всех остальных.
 // Первый элемент становится начальным значением максимального, а остальные перебираются в цикле для определения максимального.
 
-const getMax = (numbers) => {
+export const getMax = (numbers) => {
   if (numbers.length === 0) {
     return null;
   }
@@ -246,4 +246,4 @@ const getMax = (numbers) => {
   return maxNumber;
 };
 
-export { getMax };
+
